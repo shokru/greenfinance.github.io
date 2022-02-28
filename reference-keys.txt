@@ -1,2 +1,16 @@
-Introduction
+fig:googletrends
+introduction
+context
+growing-interest
+growing-demand
+jargon
+actors
+data
+landscape-of-providers
+construction-process
+esg-disagreement
+sovereign-esg
+esg
+green_perf
+climate
 Bib
