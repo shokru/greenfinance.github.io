@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1418 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.0345,0,0,0.887392,-94.2833,-23.1561)">
+        <path d="M171.265,217.064L171.265,234.936L147.679,207.441L171.265,179.945L171.265,197.817L1383.16,197.817L1383.16,179.945L1406.75,207.441L1383.16,234.936L1383.16,217.064L171.265,217.064Z" style="fill:url(#_Linear1);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-69.2307,-86.611)">
+        <text x="107.905px" y="337.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(31,112,184);">car<tspan x="175.555px 203.355px " y="337.68px 337.68px ">es</tspan> mor<tspan x="329.355px " y="337.68px ">e</tspan></text>
+        <text x="86.155px" y="387.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(31,112,184);">about pr<tspan x="280.705px 310.405px " y="387.68px 387.68px ">oﬁ</tspan>ts</text>
+        <text x="144.105px" y="437.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(31,112,184);">and risk</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-58.3105,-296.591)">
+        <text x="116.805px" y="337.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(31,112,184);">traditional</text>
+        <text x="141.78px" y="387.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(31,112,184);">investor</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1013.66,-98.7414)">
+        <text x="107.905px" y="337.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(32,146,83);">car<tspan x="175.555px 203.355px " y="337.68px 337.68px ">es</tspan> mor<tspan x="329.355px " y="337.68px ">e</tspan></text>
+        <text x="166.28px" y="387.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(32,146,83);">about</text>
+        <text x="86.305px" y="437.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(32,146,83);">sustainability</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1003.23,-297.741)">
+        <text x="155.68px" y="337.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(32,146,83);">impact</text>
+        <text x="141.78px" y="387.68px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(32,146,83);">investor</text>
+    </g>
+    <g transform="matrix(1,0,0,1,46.0704,-71.8795)">
+        <text x="520.09px" y="137.068px" style="font-family:'Avenir-Medium', 'Avenir';font-weight:500;font-size:50px;fill:rgb(1,122,120);">ESG investor</text>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1259.07,0,0,54.9909,147.679,207.441)"><stop offset="0" style="stop-color:rgb(90,125,191);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(18,152,95);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

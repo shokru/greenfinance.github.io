@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 690 380" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <g transform="matrix(1.10545,0,0,1,-20.1909,-288.639)">
+        <path d="M449.987,304.681C449.987,298.659 445.098,293.77 439.077,293.77L202.384,293.77C196.363,293.77 191.474,298.659 191.474,304.681L191.474,363.959C191.474,369.981 196.363,374.869 202.384,374.869L439.077,374.869C445.098,374.869 449.987,369.981 449.987,363.959L449.987,304.681Z" style="fill:rgb(238,247,240);stroke:rgb(57,183,129);stroke-width:0.71px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-3.64305,259.898)">
+        <path d="M390.565,56.652C390.565,51.749 387.021,47.767 382.655,47.767L233.395,47.767C229.029,47.767 225.485,51.749 225.485,56.652L225.485,109.217C225.485,114.121 229.029,118.102 233.395,118.102L382.655,118.102C387.021,118.102 390.565,114.121 390.565,109.217L390.565,56.652Z" style="fill:rgb(226,244,253);stroke:rgb(34,122,193);stroke-width:0.75px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-68.245)">
+        <path d="M398.245,206.993C398.245,203.318 395.262,200.335 391.587,200.335L206.845,200.335C203.171,200.335 200.188,203.318 200.188,206.993L200.188,241.253C200.188,244.927 203.171,247.91 206.845,247.91L391.587,247.91C395.262,247.91 398.245,244.927 398.245,241.253L398.245,206.993Z" style="fill:rgb(254,240,233);stroke:rgb(243,118,88);stroke-width:0.75px;"/>
+    </g>
+    <g transform="matrix(-1,0,0,1,677.314,-179.964)">
+        <path d="M182.892,279.982L494.422,279.982" style="fill:none;fill-rule:nonzero;stroke:rgb(9,9,9);stroke-width:2.5px;stroke-dasharray:5,5,0,0;"/>
+    </g>
+    <g transform="matrix(0.963533,0.267591,0.267591,-0.963533,-47.5305,276.127)">
+        <path d="M171.875,215.748C171.875,215.748 506.165,331.366 548.671,215.748" style="fill:none;fill-rule:nonzero;stroke:rgb(9,9,9);stroke-width:2.5px;stroke-dasharray:5,5,0,0;"/>
+    </g>
+    <g transform="matrix(1.27892,1.19703,-0.544368,0.58161,-169.449,-384.658)">
+        <path d="M397.306,300.827L397.306,303.832L395.203,299.208L397.306,294.584L397.306,297.59L430.432,297.59L430.432,294.584L432.535,299.208L430.432,303.832L430.432,300.827L397.306,300.827Z" style="fill:rgb(34,80,191);"/>
+    </g>
+    <g transform="matrix(1.11259,-0.68126,0.415996,0.679377,-170.466,389.958)">
+        <path d="M398.026,300.827L398.026,303.832L395.203,299.208L398.026,294.584L398.026,297.59L429.712,297.59L429.712,294.584L432.535,299.208L429.712,303.832L429.712,300.827L398.026,300.827Z" style="fill:rgb(34,80,191);"/>
+    </g>
+    <g transform="matrix(-0.00016782,-0.684934,0.796622,-0.000195185,69.2792,574.759)">
+        <path d="M400.581,300.827L400.581,303.832L395.203,299.208L400.581,294.584L400.581,297.59L427.157,297.59L427.157,294.584L432.535,299.208L427.157,303.832L427.157,300.827L400.581,300.827Z" style="fill:rgb(34,80,191);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-40.883)">
+        <path d="M555.3,258.174L558.295,258.174L553.688,262.781L549.081,258.174L552.075,258.174L552.075,162.709L549.081,162.709L553.688,158.102L558.295,162.709L555.3,162.709L555.3,258.174Z" style="fill:rgb(9,9,9);"/>
+    </g>
+    <g transform="matrix(0.000451096,1,-1.04476,0.000471286,599.985,-305.728)">
+        <path d="M555.3,258.174L558.295,258.174L553.688,262.781L549.081,258.174L552.075,258.174L552.075,162.709L549.081,162.709L553.688,158.102L558.295,162.709L555.3,162.709L555.3,258.174Z" style="fill:rgb(9,9,9);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,53.832)">
+        <path d="M177.373,194.513L179.478,196.404L173.177,196.571L173.001,190.585L175.106,192.476L235.658,131.655L233.553,129.764L239.854,129.597L240.03,135.582L237.925,133.691L177.373,194.513Z" style="fill:rgb(243,111,33);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,85.1762)">
+        <path d="M335.739,101.319L333.812,103.172L333.832,97.45L339.74,97.469L337.814,99.323L434.423,193.506L436.349,191.652L436.33,197.374L430.421,197.355L432.348,195.501L335.739,101.319Z" style="fill:rgb(243,111,33);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-52.013)">
+        <path d="M481.141,284.818L484.117,283.087L482.46,289.516L475.936,287.846L478.912,286.115L395.436,147.195L392.459,148.926L394.117,142.497L400.641,144.167L397.664,145.898L481.141,284.818Z" style="fill:rgb(41,168,126);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-156.394)">
+        <path d="M172.908,288.2L174.797,290.873L168.267,289.624L169.604,283.524L171.493,286.198L233.137,248.194L231.247,245.521L237.777,246.77L236.441,252.869L234.552,250.197L172.908,288.2Z" style="fill:rgb(41,168,126);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-4.529)">
+        <path d="M132.071,203.098L136.022,203.098L129.944,209.176L123.866,203.098L127.817,203.098L127.817,181.431L123.866,181.431L129.944,175.353L136.022,181.431L132.071,181.431L132.071,203.098Z"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-66.4709,-1.52799)">
+        <text x="99.467px" y="218.789px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;">Individuals (citizens)</text>
+        <text x="232.243px" y="218.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">:</text>
+        <text x="136.849px" y="230.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- have pr<tspan x="183.995px 190.668px " y="230.789px 230.789px ">ef</tspan>er<tspan x="204.663px 211.336px " y="230.789px 230.789px ">en</tspan>ces</text>
+        <text x="68.191px" y="242.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">(</text>
+        <text x="71.312px" y="242.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">wealth/consumption</text>
+        <text x="183.774px" y="242.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">vs.</text>
+        <text x="201.349px" y="242.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(41,168,126);">ethics</text>
+        <text x="232.459px" y="242.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">)</text>
+        <text x="129.527px" y="254.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(243,111,33);">- consume pr<tspan x="199.574px 206.691px " y="254.789px 254.789px ">od</tspan>ucts</text>
+        <text x="154.889px" y="266.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">- invest in ﬁr<tspan x="220.241px 230.467px " y="266.789px 266.789px ">ms</tspan></text>
+        <text x="71.91px" y="278.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(0,0,10);">- manage ﬁr<tspan x="136.608px 146.833px " y="278.789px 278.789px ">ms</tspan> (some of them)</text>
+        <text x="72.397px" y="290.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(9,9,9);">- work in ﬁr<tspan x="132.186px 142.411px " y="290.789px 290.789px ">ms</tspan> (or cr<tspan x="177.995px 184.668px " y="290.789px 290.789px ">ea</tspan>te them)</text>
+        <text x="177.761px" y="302.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(9,9,9);">- pay taxes</text>
+        <text x="204.678px" y="314.789px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(9,9,9);">- vote</text>
+    </g>
+    <g>
+        <text x="496.842px" y="237.705px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;">Pr<tspan x="511.11px 519.652px " y="237.705px 237.705px ">od</tspan>ucing ﬁr<tspan x="582.683px 594.865px " y="237.705px 237.705px ">ms</tspan></text>
+        <text x="439.637px" y="249.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(41,168,126);">- have a social/envir<tspan x="545.485px 552.602px " y="249.705px 249.705px ">on</tspan>mental impact</text>
+        <text x="446.309px" y="261.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(41,168,126);">(via pollution, carbon emissions, etc.)</text>
+        <text x="439.637px" y="273.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(41,168,126);">- may invest in CSR to r<tspan x="563.704px 570.377px " y="273.705px 273.705px ">ed</tspan>uce this impact</text>
+        <text x="439.637px" y="285.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(243,111,33);">- generate output (pr<tspan x="551.881px 558.998px " y="285.705px 285.705px ">od</tspan>uct, service)</text>
+        <text x="439.637px" y="297.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">- ar<tspan x="456.975px 463.648px " y="297.705px 297.705px ">e </tspan>valued by the market and seek</text>
+        <text x="446.312px" y="309.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">high	<tspan x="476.547px " y="309.705px ">v</tspan>aluation (often via pr<tspan x="592.159px 599.276px " y="309.705px 309.705px ">oﬁ</tspan>t maximization)</text>
+        <text x="439.637px" y="321.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- pay taxes</text>
+        <text x="439.637px" y="333.705px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- r<tspan x="450.747px 457.42px " y="333.705px 333.705px ">eq</tspan>uir<tspan x="478.077px 484.75px " y="333.705px 333.705px ">e </tspan>workfor<tspan x="528.085px 533.87px " y="333.705px 333.705px ">ce</tspan>, technology &amp; capital</text>
+    </g>
+    <g>
+        <text x="17.245px" y="104.748px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;">States / Gover<tspan x="113.935px 121.972px " y="104.748px 104.748px ">nm</tspan>ents</text>
+        <text x="32.395px" y="116.748px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- can impose r<tspan x="108.224px 114.897px " y="116.748px 116.748px ">es</tspan>trictions</text>
+        <text x="60.386px" y="128.748px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(41,168,126);">- may invest or rule</text>
+        <text x="18.175px" y="140.748px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(41,168,126);">to pr<tspan x="43.724px 50.841px " y="140.748px 140.748px ">ot</tspan>ect the envir<tspan x="121.07px 128.187px " y="140.748px 140.748px ">on</tspan>ment</text>
+        <text x="65.701px" y="152.748px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- decide tax levels</text>
+        <text x="18.592px" y="164.748px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- ar<tspan x="35.931px 42.604px " y="164.748px 164.748px ">e </tspan>elected by individuals</text>
+    </g>
+    <g>
+        <text x="509.673px" y="57.068px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;">Exter<tspan x="545.967px 554.005px " y="57.068px 57.068px ">na</tspan>l players</text>
+        <text x="533.025px" y="69.068px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">(e.g., lobbies)</text>
+        <text x="509.673px" y="81.068px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(9,9,9);">- may put pr<tspan x="575.098px 581.773px " y="81.068px 81.068px ">es</tspan>sur<tspan x="602.45px 609.125px " y="81.068px 81.068px ">e </tspan>on ﬁr<tspan x="640.287px 650.514px " y="81.068px 81.068px ">ms</tspan></text>
+        <text x="509.673px" y="93.068px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- can be funded by ﬁr<tspan x="625.094px 635.32px " y="93.068px 93.068px ">ms</tspan></text>
+        <text x="509.673px" y="105.068px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;">- may inﬂuence gover<tspan x="625.536px 632.209px " y="105.068px 105.068px ">nm</tspan>ents</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-289.369,181.654)">
+        <text x="509.673px" y="57.068px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;">Rating agencies</text>
+        <text x="509.673px" y="69.068px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(9,9,9);">- evaluate ﬁr<tspan x="576.185px 586.412px " y="69.068px 69.068px ">ms</tspan></text>
+        <text x="516.391px" y="81.068px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(9,9,9);">(e.g., on <tspan x="564.053px " y="81.068px ">s</tspan>ustainability<tspan x="631.621px 634.961px " y="81.068px 81.068px ">, </tspan>footprint)</text>
+        <text x="509.673px" y="93.068px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(26,82,188);">- inﬂuence investment decisions</text>
+    </g>
+    <g>
+        <text x="279.292px" y="19.127px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;fill:rgb(40,166,108);">Envir<tspan x="313.025px 321.566px " y="19.127px 19.127px ">on</tspan>ment</text>
+        <text x="201.658px" y="31.127px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(40,166,108);">- can be deteriorated by ﬁr<tspan x="345.692px 355.917px " y="31.127px 31.127px ">ms</tspan> via pr<tspan x="393.718px 400.835px " y="31.127px 31.127px ">od</tspan>uction</text>
+        <text x="201.658px" y="43.127px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(40,166,108);">- may be impacted by individuals</text>
+        <text x="201.658px" y="55.127px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(40,166,108);">- can str<tspan x="243.898px 251.015px " y="55.127px 55.127px ">on</tspan>gly alter aggr<tspan x="328.793px 335.466px " y="55.127px 55.127px ">eg</tspan>ate output</text>
+        <text x="208.33px" y="67.127px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(40,166,108);">(upon disaster),</text>
+        <text x="293.707px" y="67.127px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(40,166,108);">destabilize economies &amp; markets,</text>
+        <text x="208.33px" y="79.127px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(40,166,108);">af<tspan x="217.896px 221.449px " y="79.127px 79.127px ">fe</tspan>ct public health (pollution, heatwaves)</text>
+    </g>
+    <g>
+        <text x="250.554px" y="148.573px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;fill:rgb(243,111,33);">Pr<tspan x="264.823px 273.364px " y="148.573px 148.573px ">od</tspan>uct market</text>
+        <text x="244.267px" y="160.573px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(243,111,33);">this is wher<tspan x="303.387px 310.061px " y="160.573px 160.573px ">e </tspan>the ﬁr<tspan x="344.729px 354.955px " y="160.573px 160.573px ">ms</tspan></text>
+        <text x="218.167px" y="172.573px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(243,111,33);">sell their pr<tspan x="277.703px 284.82px " y="172.573px 172.573px ">od</tspan>ucts to customers</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-3.64305,45.7669)">
+        <text x="259.791px" y="277.626px" style="font-family:'Avenir-Black', 'Avenir', sans-serif;font-weight:800;font-size:14px;fill:rgb(25,90,170);">Financial markets</text>
+        <text x="236.867px" y="289.626px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">this is wher<tspan x="295.987px 302.66px " y="289.626px 289.626px ">e </tspan>ﬁr<tspan x="316.652px 326.877px " y="289.626px 289.626px ">ms</tspan> access</text>
+        <text x="236.867px" y="301.626px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">capital ar<tspan x="285.533px 292.206px " y="301.626px 301.626px ">e </tspan>and ar<tspan x="329.13px 335.803px " y="301.626px 301.626px ">e </tspan>valued</text>
+        <text x="236.867px" y="313.626px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">via supply/demand</text>
+        <text x="236.867px" y="325.626px" style="font-family:'Avenir-Book', 'Avenir';font-size:12px;fill:rgb(25,90,170);">mechanisms</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-179.961)">
+        <path d="M172.134,279.98L180.651,274.635L180.651,285.326L172.134,279.98Z" style="fill:rgb(9,9,9);stroke:black;stroke-width:0.75px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,62.645)">
+        <path d="M538.472,162.936L533.126,154.419L543.817,154.419L538.472,162.936Z" style="fill:rgb(9,9,9);stroke:black;stroke-width:0.75px;"/>
+    </g>
+    <g transform="matrix(0.442342,-0.896846,0.896846,0.442342,125.769,609.954)">
+        <path d="M507.472,162.936L502.126,154.419L512.817,154.419L507.472,162.936Z" style="fill:rgb(9,9,9);stroke:black;stroke-width:0.75px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,36.617)">
+        <path d="M173.766,176.689L174.861,166.694L183.243,173.33L173.766,176.689Z" style="fill:rgb(9,9,9);stroke:black;stroke-width:0.75px;"/>
+    </g>
+    <g transform="matrix(0.974537,-0.161961,-0.170178,-1.02398,37.9806,439.263)">
+        <path d="M159.155,126.491C200.444,216.446 384.427,191.302 489.992,131.257" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.47px;stroke-dasharray:4.93,4.93,0,0;"/>
+    </g>
+    <g transform="matrix(0.844432,-0.535663,-0.535663,-0.844432,164.608,449.01)">
+        <path d="M167.227,248.601C200.702,244.267 182.893,275.32 235.916,248.601" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.5px;stroke-dasharray:5,5,0,0;"/>
+    </g>
+    <g transform="matrix(0.0468544,0.998902,0.998902,-0.0468544,-16.6643,2.3213)">
+        <path d="M159.238,181.5C159.238,181.5 185.297,215.267 218.4,181.5" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.5px;stroke-dasharray:5,5,0,0;"/>
+    </g>
+</svg>
