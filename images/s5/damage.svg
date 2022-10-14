@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1418 591" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,0.969872,-3.06108,28.5327)">
+        <path d="M67.6,46.839L67.6,523.002L1310.43,523.002" style="fill:none;stroke:black;stroke-width:3.17px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1079.99,390.858)">
+        <text x="202.065px" y="114.1px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;">T<tspan x="228.896px " y="114.1px ">A</tspan>T</text>
+    </g>
+    <g transform="matrix(1,0,0,0.91568,0,27.662)">
+        <path d="M66.461,551.256C66.461,551.256 1029.44,597.026 1267.08,265.02" style="fill:none;stroke:rgb(250,105,2);stroke-width:3.26px;stroke-dasharray:6.52,6.52,0,0;"/>
+    </g>
+    <g transform="matrix(1,0,0,1.81819,0,-471.78)">
+        <path d="M66.461,551.256C66.461,551.256 1029.44,597.026 1267.08,265.02" style="fill:none;stroke:rgb(149,77,212);stroke-width:2.13px;stroke-dasharray:4.26,4.26,0,0;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-137.676,-17.054)">
+        <text x="154.55px" y="62.3px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;">Damage</text>
+    </g>
+    <g transform="matrix(1.19186,0,0,1.08974,-211.103,-198.653)">
+        <path d="M231.803,230.685L241.812,253.171L221.794,253.171L231.803,230.685Z" style="stroke:rgb(235,235,235);stroke-width:2.74px;"/>
+    </g>
+    <g transform="matrix(0.00240474,1.19185,-1.08974,0.00219871,1583.21,259.941)">
+        <path d="M231.803,230.685L241.812,253.171L221.794,253.171L231.803,230.685Z" style="stroke:rgb(235,235,235);stroke-width:2.74px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,325.998,-81.0238)">
+        <text x="511.687px" y="246.757px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(149,77,212);">conservative</text>
+        <text x="511.687px" y="298.393px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(149,77,212);">curve</text>
+    </g>
+    <g transform="matrix(1,0,0,1,516.202,222.613)">
+        <text x="511.687px" y="246.757px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(250,105,2);">optimistic</text>
+        <text x="597.795px" y="298.393px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(250,105,2);">curve</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-98.9926,-57.8348)">
+        <text x="188.863px" y="449.142px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(113,113,113);">small change</text>
+        <text x="321.566px" y="500.778px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(113,113,113);">=</text>
+        <text x="194.417px" y="552.414px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(113,113,113);">little damage</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-10,2)">
+        <path d="M378.808,543.615L378.808,523.008" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,284,2)">
+        <path d="M378.808,543.615L378.808,523.008" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-13.9335,20.0393)">
+        <text x="333.989px" y="561.614px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:33.333px;">+1°C</text>
+    </g>
+    <g transform="matrix(1,0,0,1,284.779,20.0393)">
+        <text x="333.989px" y="561.614px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:33.333px;">+2°C</text>
+    </g>
+    <g transform="matrix(1,0,0,0.983736,578,10.5064)">
+        <path d="M378.808,543.615L378.808,523.008" style="fill:none;stroke:black;stroke-width:3.15px;"/>
+    </g>
+    <g transform="matrix(1,0,0,0.983736,578.779,29.1655)">
+        <text x="333.989px" y="561.614px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:33.884px;">+3°C</text>
+    </g>
+</svg>
