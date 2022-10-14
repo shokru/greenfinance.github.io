@@ -1,4 +1,9 @@
 fig:googletrends
+tab:unnamed-chunk-60
+tab:unnamed-chunk-61
+tab:unnamed-chunk-62
+tab:unnamed-chunk-64
+tab:unnamed-chunk-65
 tab:unnamed-chunk-70
 about
 introduction
