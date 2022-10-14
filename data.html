@@ -90,7 +90,7 @@ Code averse readers should of course skip it.</p>
 </h3>
 <p>ESG data pertains to numerical fields that assess an entity’s (e.g., firm or country) performance with regard to one of the three thematic pillars: <strong>Environment</strong>, <strong>Social</strong> and <strong>Governance</strong>. Each pillar has several dimensions, also known as <strong>issues</strong>. The latter can even be further decomposed into sub-issues.</p>
 <p>Raw numbers are simply fields (ex: CO2 emissions). Fields are processed or aggregated into synthetic scores at the issue and pillar level. These scores give a rough idea of the performance of the entity with respect to each pillar or issue.</p>
-<p><strong>NOTE</strong>: aggregation is much more complex than it seems (see below). Some fields are beneficial, others detrimental and others should be compared to industry standard. Moreover, aggregation is very complex in the presence of missing fields which happens all the time!</p>
+<p><strong>NOTE</strong>: aggregation is much more complex than it seems (see <a href="http://www.greenfinance.education/data.html#aggregating-fields">below</a>). Some fields are beneficial, others detrimental and others should be compared to industry standard. Moreover, aggregation is very complex in the presence of missing fields which happens all the time!</p>
 <div class="inline-figure"><img src="images/s2/tour.png" width="760px" style="display: block; margin: auto;"></div>
 <p>Another classification, from the ISO 26000 framework: it provides recommendations, <strong>but is not a certification</strong>.</p>
 <div class="inline-figure"><img src="images/s2/iso_26000.png" width="760px" style="display: block; margin: auto;"></div>
@@ -483,9 +483,11 @@ with society – i.e., its customers, its suppliers, its partners and public aut
 </ol>
 </li>
 <li>Then, it’s all a matter of weighting, and this will depend on preferences. For instance, given synthetic scores for each pillar, it is customary to take the simple average of the three (E+S+G)/3, but it is entirely possible to give more weight to one pillar in particular (1/2 + 1/4 + 1/4 for instance).</li>
-<li>The second issue is <strong>missing data</strong>, a real pain in the discipline. One partial solution is simply to include a coverage score, wherein the amount of data disclosed by the company is a field of its own - and can have a substantial impact on the overall score. The other alternative is imputation, whereby we attribute a “<em>fake</em>” score to the company for a given field. There are many ways to perform imputation, depending on preferences and beliefs. The most conservative option is to give the firm the worst possible score, in order to strongly penalize the corporations that refuse to disclose (but sometimes it’s also a question of lack of resource to do so… large firms clearly have an advantage here). A common option is to give an <em>average</em> (or median) value - either over all firms, or over all the firms of the same sector.</li>
+<li>The second issue is <strong>missing data</strong>, a real pain in the discipline. One partial solution is simply to include a coverage score, wherein the amount of data disclosed by the company is a field of its own - and can have a substantial impact on the overall score. The other alternative is imputation, whereby we attribute a “<em>fake</em>” (or guessed) score to the company for a given field. There are many ways to perform imputation, depending on preferences and beliefs. The most conservative option is to give the firm the worst possible score, in order to strongly penalize the corporations that refuse to disclose (but sometimes it’s also a question of lack of resource to do so… large firms clearly have an advantage here). A common option is to give an <em>average</em> (or median) value - either over all firms, or over all the firms of the same sector. Finally, it is also possible to resort to exposure estimation, as with the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3957900"><strong>carbon beta</strong></a>.</li>
 </ul>
 <p>In the end, the methodology that rating agencies use to compute synthetic scores is often considered as <strong>intellectual property</strong>, though some of them are quite transparent about how they proceed (white papers are sometimes available). But in the end, it is the gathering of granular data that is the most time-consuming. Aggregation is a matter of many choices, but is easily automated.</p>
+<br><hr>
+<p><br></p>
 </div>
 </div>
 <div id="exploring-a-dataset-on-us-corporations" class="section level2" number="3.4">
@@ -505,6 +507,7 @@ with society – i.e., its customers, its suppliers, its partners and public aut
 <li>available for many companies</li>
 </ol>
 <p>is rare. One exception is <strong>Yahoo</strong>: <a href="https://finance.yahoo.com/quote/AAPL/sustainability/" class="uri">https://finance.yahoo.com/quote/AAPL/sustainability/</a>, which provides Sustainalytics’ ESG Risk Ratings. However, it provides the current score only and the history is not available. Moreover, scrapping Yahoo takes <em>a lot</em> of time (hours &amp; hours), even with automated scripts.</p>
+<p>Another interesting source is the <a href="https://sciencebasedtargets.org/reports/sbti-progress-report-2021/progress-data-dashboard"><strong>Science Based Targets</strong></a>, which provides an up to date dashboard. Again, there is only static data, and the number of firms is about 830+ at the end of 2022 (with only 150 from the US).</p>
 <p>This is where ESG data vendors come in handy. Their databases are useful, but quite expensive.</p>
 <p>We extracted data from two traditional vendors, which are anonymized. We make important comments about the dataset:</p>
 <ul>
@@ -522,6 +525,7 @@ with society – i.e., its customers, its suppliers, its partners and public aut
 </li>
 <li>Many fields are missing. For instance, the closing price of American Airlines (AAL) is only available from 2013 onwards. This comes from the merger with US Airways. In many other cases, e.g., for Scope data, the values are simply not known (e.g., not disclosed by firms).</li>
 </ul>
+<p>The <strong>data</strong> is available on <a href="https://github.com/shokru/greenfinance.github.io">Github</a>, in <a href="https://www.greenfinance.education/ESG_data.RData"><strong>R format (.RData)</strong></a> as well as in <a href="https://www.greenfinance.education/ESG_data.xlsx"><strong>Excel (.xlsx) format</strong></a>.<br><span class="math inline">\(\rightarrow\)</span> <span style="color: #0FA6F7;">It is meant to play with for pedagogical purposes only!</span></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="st">"ESG_data.RData"</span><span class="op">)</span>  <span class="co"># This is to import the file (in the present directory)</span>
 <span class="va">ESG_data</span> |&gt; <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span>    <span class="co"># This is to see the last 10 rows of the data</span></code></pre></div>
@@ -3320,7 +3324,10 @@ There are many organizations that gather and aggregate indicators at the country
 <a href="https://www.imf.org/en/Data"><strong>IMF</strong></a> - some features are not available from everywhere!<br>
 </li>
 <li>
-<a href="https://www.heritage.org/index/explore"><strong>Heritage Foundation</strong></a>: very centered around the notion of “<em>freedom</em>”.</li>
+<a href="https://www.heritage.org/index/explore"><strong>Heritage Foundation</strong></a>: very centered around the notion of “<em>freedom</em>”.<br>
+</li>
+<li>
+<a href="https://www.iges.or.jp/en/pub/iges-indc-ndc-database/en"><strong>Institute for Global Environmental Strategies</strong></a> for the <a href="https://unfccc.int/ndc-information/nationally-determined-contributions-ndcs"><strong>Nationally Determined Contributions</strong></a> (NDCs) of countries.</li>
 </ul>
 <p>Most of the time, an analyst will need fields from multiple sources, which will require joining datasets… a practice that is very commonplace in data science. Even though some sources (e.g., the World Bank, gapminder) provide exhaustive fields.</p>
 </div>
