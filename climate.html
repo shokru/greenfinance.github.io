@@ -170,13 +170,38 @@ First, a proof that global warming is <strong>man-made</strong>. Many climate de
 <p>Ok, so it is now clear that the environment will change in the years and decades to come. But what’s the link with <strong>finance</strong>? To answer this question, we will start by emphasizing the link between nature and the economy.</p>
 </div>
 </div>
-<div id="dice-models" class="section level2" number="6.2">
+<div id="the-kaya-representation" class="section level2" number="6.2">
 <h2>
-<span class="header-section-number">6.2</span> DICE models<a class="anchor" aria-label="anchor" href="#dice-models"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2</span> The Kaya representation<a class="anchor" aria-label="anchor" href="#the-kaya-representation"><i class="fas fa-link"></i></a>
 </h2>
-<div id="some-key-notions-within-dice" class="section level3" number="6.2.1">
+<p>The <strong>Kaya identity</strong> was developed by Japanese economists Yoichi Kaya and Keiichi Yokobori in the 1990s. Its purpose is to decompose <span class="math inline">\(CO_2\)</span> emissions into simple chain blocks that are responsible for them. Its statement is:</p>
+<p><span class="math inline">\(CO_2=POP \times \frac{GDP}{POP} \times \frac{E}{GDP} \times \frac{CO_2}{E},\)</span><br>
+where <span class="math inline">\(E\)</span> is energy, <span class="math inline">\(GDP\)</span> is economic output and <span class="math inline">\(POP\)</span> is population. Thus:<br>
+- <span class="math inline">\(\frac{CO_2}{E}\)</span> is how much <span class="math inline">\(CO_2\)</span> we need to produce a given amount of energy, i.e;, how green the energy we produce is;<br>
+- <span class="math inline">\(\frac{E}{GDP}\)</span> is how much energy we need to create economic value, or, equivalently, how efficient we are with the energy we consume;<br>
+- <span class="math inline">\(\frac{GDP}{POP}\)</span>, GDP per capita, is a proxy for aggregate standard of living.</p>
+<p>Therefore, mechanically, if we want to <strong>reduce emissions</strong>, we have to curtail one or several of these terms. Here are some comments:</p>
+<ul>
+<li>
+<span class="math inline">\(\frac{CO_2}{E}\)</span>: this requires for instance shifting energy production to non carbon-based sources (nuclear, renewables);<br>
+</li>
+<li>
+<span class="math inline">\(\frac{E}{GDP}\)</span>: this means being able to produce more efficiently, with lower energy input;<br>
+</li>
+<li>
+<span class="math inline">\(\frac{GDP}{POP}\)</span>: this implies to accept possibly lower standards of living (e.g., travelling less, eating less meat, buying fewer clothes, etc. - consuming less in short);<br>
+</li>
+<li>
+<span class="math inline">\(POP\)</span>: total population</li>
+</ul>
+</div>
+<div id="dice-models" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> DICE models<a class="anchor" aria-label="anchor" href="#dice-models"><i class="fas fa-link"></i></a>
+</h2>
+<div id="some-key-notions-within-dice" class="section level3" number="6.3.1">
 <h3>
-<span class="header-section-number">6.2.1</span> Some key notions within DICE<a class="anchor" aria-label="anchor" href="#some-key-notions-within-dice"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.1</span> Some key notions within DICE<a class="anchor" aria-label="anchor" href="#some-key-notions-within-dice"><i class="fas fa-link"></i></a>
 </h3>
 <p>In 2018, <a href="https://en.wikipedia.org/wiki/William_Nordhaus">William Nordhaus</a> received the Nobel prize in economics for his contributions in models that link the climate with economic output. The idea is simple and very much related to <strong>double materiality</strong>: if the economy hurts the environment (GDP <span class="math inline">\(\rightarrow\)</span> T°), then at some point, the environment, like the Empire, will <strong>strike back</strong> (T° <span class="math inline">\(\rightarrow\)</span> GDP). In the DICE model, this comes from damage functions, which assess by how much rising temperatures will hurt the economic output.</p>
 <p>A simplified scheme of the model is presented below. We mostly follow the notations and links outlined in <a href="https://www.pnas.org/doi/pdf/10.1073/pnas.1609244114"><strong>Revisiting the social cost of carbon</strong></a>.</p>
@@ -209,9 +234,9 @@ SCC = \frac{\frac{\partial W}{\partial E_t}}{\frac{\partial W}{\partial C_t}}=\f
 - in <strong>R</strong>: <a href="https://github.com/olugovoy/climatedice" class="uri">https://github.com/olugovoy/climatedice</a><br>
 - in <strong>Python</strong>: <a href="https://github.com/hazem2410/PyDICE" class="uri">https://github.com/hazem2410/PyDICE</a></p>
 </div>
-<div id="dice-offspring" class="section level3" number="6.2.2">
+<div id="dice-offspring" class="section level3" number="6.3.2">
 <h3>
-<span class="header-section-number">6.2.2</span> DICE offspring<a class="anchor" aria-label="anchor" href="#dice-offspring"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.2</span> DICE offspring<a class="anchor" aria-label="anchor" href="#dice-offspring"><i class="fas fa-link"></i></a>
 </h3>
 <p>The original model was just <a href="https://cowles.yale.edu/sites/default/files/files/pub/d20/d2084.pdf">the beginning</a>. Since the first versions, scientists have refined it in several ways, with focus on the <strong>agriculture</strong> (<a href="https://github.com/remindmodel/remind">REMIND MAgPIE</a>), or the <strong>energy sector</strong> (<a href="https://github.com/iiasa/message_ix">MESSAGEix</a>). The models that link the environment and the economy (+ other domains) are called <a href="https://en.wikipedia.org/wiki/Integrated_assessment_modelling">Integrated Assessment Models</a> (<strong>IAMs</strong>). The diversity in IAMs is such that researchers have created the <a href="https://www.iamconsortium.org/">IAM Consortium</a>. A snapshot at the models: <a href="https://www.iamcdocumentation.eu/index.php/IAMC_wiki" class="uri">https://www.iamcdocumentation.eu/index.php/IAMC_wiki</a></p>
 <p>Example of modules in <strong>REMIND-MAgPIE</strong>:</p>
@@ -220,14 +245,14 @@ SCC = \frac{\frac{\partial W}{\partial E_t}}{\frac{\partial W}{\partial C_t}}=\f
 <div class="inline-figure"><img src="images/s5/remind_4.png" width="690px" style="display: block; margin: auto;"></div>
 </div>
 </div>
-<div id="use-in-applied-financial-models" class="section level2" number="6.3">
+<div id="use-in-applied-financial-models" class="section level2" number="6.4">
 <h2>
-<span class="header-section-number">6.3</span> Use in applied financial models<a class="anchor" aria-label="anchor" href="#use-in-applied-financial-models"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4</span> Use in applied financial models<a class="anchor" aria-label="anchor" href="#use-in-applied-financial-models"><i class="fas fa-link"></i></a>
 </h2>
 <p>The IAMs mentioned above are useful in finance because some of their output can be used in financial modelling.</p>
-<div id="ngfs-scenarios" class="section level3" number="6.3.1">
+<div id="ngfs-scenarios" class="section level3" number="6.4.1">
 <h3>
-<span class="header-section-number">6.3.1</span> NGFS scenarios<a class="anchor" aria-label="anchor" href="#ngfs-scenarios"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4.1</span> NGFS scenarios<a class="anchor" aria-label="anchor" href="#ngfs-scenarios"><i class="fas fa-link"></i></a>
 </h3>
 <p><strong>Network for Greening the Financial System</strong> (NGFS): a network of central banks and supervisors working on climate change and sharing best practices so that the financial system increases support to the transition towards a more sustainable economy. Like the IPCC, they propose scenarios that model links between climate, the economy and the financial system (basically, its climate <span class="math inline">\(\leftrightarrow\)</span> economy <span class="math inline">\(\leftrightarrow\)</span> finance). Below, we show a diagram that outlines the modellling channels (from a document called <strong>NGFS climate scenarios for central banks and supervisors</strong>):</p>
 <div class="inline-figure"><img src="images/s5/ngfs.png" width="790px" style="display: block; margin: auto;"></div>
@@ -238,9 +263,9 @@ SCC = \frac{\frac{\partial W}{\partial E_t}}{\frac{\partial W}{\partial C_t}}=\f
 <p>And like the IPCC, the NGFS relies on scenarios (from the NGFS technical documentation):</p>
 <div class="inline-figure"><img src="images/s5/ngfs_scenarios.png" width="590px" style="display: block; margin: auto;"></div>
 </div>
-<div id="a-peak-at-nigem" class="section level3" number="6.3.2">
+<div id="a-peak-at-nigem" class="section level3" number="6.4.2">
 <h3>
-<span class="header-section-number">6.3.2</span> A peak at NiGEM<a class="anchor" aria-label="anchor" href="#a-peak-at-nigem"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4.2</span> A peak at NiGEM<a class="anchor" aria-label="anchor" href="#a-peak-at-nigem"><i class="fas fa-link"></i></a>
 </h3>
 <p>Nevertheless, the output of NGFS scenarios remain essentially <em>economic</em>, and not financial.<br>
 To get <strong>financial output</strong>, we turn to the National Institute Global Econometric Model (<strong>NiGEM</strong>) model (from the English National Institute of Economic and Social Research).</p>
@@ -290,9 +315,9 @@ where
 <li>Real estate price indices (residential)</li>
 </ul>
 </div>
-<div id="generic-climate-based-valuation" class="section level3" number="6.3.3">
+<div id="generic-climate-based-valuation" class="section level3" number="6.4.3">
 <h3>
-<span class="header-section-number">6.3.3</span> Generic climate-based valuation<a class="anchor" aria-label="anchor" href="#generic-climate-based-valuation"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4.3</span> Generic climate-based valuation<a class="anchor" aria-label="anchor" href="#generic-climate-based-valuation"><i class="fas fa-link"></i></a>
 </h3>
 <p>For investors, it is useful to understand how the valuation of their assets may be impacted by climate change. Below, we propose a method that seeks to map risks from global warming into changes of corporate valuation.</p>
 <p>First, we consider a <strong>baseline</strong> valuation, i.e., what happens if nothing changes (no climate change, no carbon tax = a “<em>perpetual present</em>”). The baseline would rely on some past data (e.g., 20-50 years). Then, given some <strong>additional data</strong>, e.g., on where plants are located (and how carbon intensive they can be), which green/tech patents firms have, etc., a calendar of <strong>change in cash flows</strong> is determined:
@@ -329,9 +354,9 @@ In practice, <span class="math inline">\(r\)</span> is usually obtained via a da
 <span class="math display">\[\%V = \frac{V_{climate}-V_{base}}{V_{base}}.\]</span></p>
 </div>
 </div>
-<div id="going-further-recent-trends" class="section level2" number="6.4">
+<div id="going-further-recent-trends" class="section level2" number="6.5">
 <h2>
-<span class="header-section-number">6.4</span> Going further (recent trends)<a class="anchor" aria-label="anchor" href="#going-further-recent-trends"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.5</span> Going further (recent trends)<a class="anchor" aria-label="anchor" href="#going-further-recent-trends"><i class="fas fa-link"></i></a>
 </h2>
 <p>Below, we list a few topics that have seen a surge of interest lately:</p>
 <ul>
@@ -399,20 +424,21 @@ In practice, <span class="math inline">\(r\)</span> is usually obtained via a da
 <li><a class="nav-link" href="#ipcc-2022-snapshots"><span class="header-section-number">6.1.4</span> IPCC 2022: snapshots</a></li>
 </ul>
 </li>
+<li><a class="nav-link" href="#the-kaya-representation"><span class="header-section-number">6.2</span> The Kaya representation</a></li>
 <li>
-<a class="nav-link" href="#dice-models"><span class="header-section-number">6.2</span> DICE models</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#some-key-notions-within-dice"><span class="header-section-number">6.2.1</span> Some key notions within DICE</a></li>
-<li><a class="nav-link" href="#dice-offspring"><span class="header-section-number">6.2.2</span> DICE offspring</a></li>
+<a class="nav-link" href="#dice-models"><span class="header-section-number">6.3</span> DICE models</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#some-key-notions-within-dice"><span class="header-section-number">6.3.1</span> Some key notions within DICE</a></li>
+<li><a class="nav-link" href="#dice-offspring"><span class="header-section-number">6.3.2</span> DICE offspring</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#use-in-applied-financial-models"><span class="header-section-number">6.3</span> Use in applied financial models</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#ngfs-scenarios"><span class="header-section-number">6.3.1</span> NGFS scenarios</a></li>
-<li><a class="nav-link" href="#a-peak-at-nigem"><span class="header-section-number">6.3.2</span> A peak at NiGEM</a></li>
-<li><a class="nav-link" href="#generic-climate-based-valuation"><span class="header-section-number">6.3.3</span> Generic climate-based valuation</a></li>
+<a class="nav-link" href="#use-in-applied-financial-models"><span class="header-section-number">6.4</span> Use in applied financial models</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ngfs-scenarios"><span class="header-section-number">6.4.1</span> NGFS scenarios</a></li>
+<li><a class="nav-link" href="#a-peak-at-nigem"><span class="header-section-number">6.4.2</span> A peak at NiGEM</a></li>
+<li><a class="nav-link" href="#generic-climate-based-valuation"><span class="header-section-number">6.4.3</span> Generic climate-based valuation</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#going-further-recent-trends"><span class="header-section-number">6.4</span> Going further (recent trends)</a></li>
+<li><a class="nav-link" href="#going-further-recent-trends"><span class="header-section-number">6.5</span> Going further (recent trends)</a></li>
 </ul>
 
       <div class="book-extra">
@@ -429,7 +455,7 @@ In practice, <span class="math inline">\(r\)</span> is usually obtained via a da
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret. It was last built on 2022-10-23.</p>
+    <p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret. It was last built on 2022-10-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
