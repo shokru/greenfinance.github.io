@@ -127,7 +127,11 @@ Code averse readers should of course skip it.</p>
 <p>Strictly speaking, <strong>greenwashing</strong> relates to the marketing sphere. The <strong>Wikipedia</strong> definition is: <em>a form of advertising or marketing spin in which green PR and green marketing are deceptively used to persuade the public that an organization’s products, aims and policies are environmentally friendly</em>. One of the most common examples is H&amp;M, with is clothing line “Conscious”, which <a href="https://www.thesustainablefashionforum.com/pages/hm-is-being-sued-for-misleading-sustainability-marketing-what-does-this-mean-for-the-future-of-greenwashing">misused the Higg Materials Sustainability Index</a>.</p>
 <p>It is possible that the term be “recycled” to attempts to artificially improve sustainable reporting in order for the firm to appear greener than it actually is. One adjacent issue is the labeling of “<em>sustainable</em>” financial products, like funds. In August 2021, the financial regulators in the US (Securities and Exchange Commission - SEC) and Germany (BaFin) revealed they were investigating DWS, a subsidiary of <strong>Deutsche Bank</strong>, and the second largest fund manager in Europe. In May 2022, DWS offices were raided by the German police. In 2020, DWS claimed to have 459B€ of green assets under management (funds incorporating ESG criteria for investment decisions). The figure sank to 115B€ in 2021…</p>
 <p>This example shows that it has become very risky (and will become riskier) to dupe investors into buying wrongly labelled green funds. This is very beneficial for the industry - and maybe, at the end of the line, for the environment &amp; society.<br>
-Lastly, though it’s not necessarily related, the term “<strong>greenwishing</strong>” has emerged. This refers to firms that publicly set very ambitious environmental targets, but fail to provide rigorous explanations on how they will achieve their goals. Cheap talk is not binding, but investors are not (always) fools either…</p>
+Lastly, though it’s not necessarily related, new terms have emerged:<br>
+-“<strong>greenwishing</strong>”: this refers to firms that publicly set very ambitious environmental targets, but fail to provide rigorous explanations on how they will achieve their goals. Cheap talk is not binding, but investors are not (always) fools either…
+- “<strong>grennhushing</strong>”: (<strong>NOTE</strong>: the definition is not unambiguous!) this is either when a green company engages in some form of sustainability but refrains from communicating about it, <strong>OR</strong> when a brown company under-reports on purpose because its numbers are bad. Be careful: people can disagree on this one!<br>
+- <strong>greenlighting</strong>: communicating excessively on a green feature of a product. Possibly in order to take attention away from browner product lines.
+- see also: <strong>greenrinsing</strong>, <strong>greenshifting</strong>, etc.</p>
 </div>
 </div>
 <div id="the-playing-field" class="section level2" number="3.2">
@@ -415,6 +419,20 @@ Lastly, though it’s not necessarily related, the term “<strong>greenwishing<
 <p>The increasing demand for ESG data incites providers to spend more on the research &amp; acquisition side:</p>
 <div class="inline-figure"><img src="images/s2/02_booming.png" alt="drawing" width="800"></div>
 <p>One reason is that investors want information that is <strong>reliable</strong>, i.e., that accurately reflects the policies of firms. But this is very costly. The main explanation for this is that, as of 2022, no coercive framework forces corporations to report <strong>precise</strong> non-financial metrics, as is the case for standard accounting via balance sheets and income and cash-flow statements (EBIT, Total assets, investments, revenue, etc.).</p>
+</div>
+<div id="diversity-in-raters" class="section level3" number="3.2.4">
+<h3>
+<span class="header-section-number">3.2.4</span> Diversity in raters<a class="anchor" aria-label="anchor" href="#diversity-in-raters"><i class="fas fa-link"></i></a>
+</h3>
+<p>We refer here to the insightful report <a href="https://www.sustainability.com/globalassets/sustainability.com/thinking/pdfs/2023/rate-the-raters-report-april-2023.pdf">Rate the raters: ESG ratings at crossroads</a>.
+This report compiles results from a survey carried out by the <a href="https://www.sustainability.com/">Sustainability institute</a>.
+A few enlightening graphs below, especially with regard to quality perception (by respondents).</p>
+<div class="inline-figure"><img src="images/s2/rater_quality.png" alt="drawing" width="800"></div>
+<p>The CDP makes it to the top 2 spots on all criteria.</p>
+<p>Some differences between raters:</p>
+<div class="inline-figure"><img src="images/s2/rater_comparison.png" alt="drawing" width="800"></div>
+<p><strong>NOTE</strong>: <strong>active</strong> means that in order to be rated, companies need to respond to lengthy questionnaires.<br>
+Also: the CDP only focused on carbon, water and forests (hence, the environment): thus it is specialized. Generalized raters take into account all three pillars.</p>
 </div>
 </div>
 <div id="how-are-esg-data-collected-or-constructed" class="section level2" number="3.3">
@@ -1098,7 +1116,7 @@ Health
 <p>To evaluate the state of missing data, we resort to a dedicated package called <strong>visdat</strong> - it needs to be installed to be used.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/visdat/">visdat</a></span><span class="op">)</span> <span class="co"># Missing data visualization</span></span>
-<span><span class="fu">vis_dat</span><span class="op">(</span><span class="va">ESG_data</span>, warn_large_data <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://docs.ropensci.org/visdat/reference/vis_dat.html">vis_dat</a></span><span class="op">(</span><span class="va">ESG_data</span>, warn_large_data <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="green_finance_files/figure-html/unnamed-chunk-26-1.png" width="672"></div>
 <p>E, S, G and ESG metrics are quite empty (grey zones) because only available in the shorter Provider B sample at the end.</p>
 <p>Let us now look at coverage. We define coverage as the number of firms for which a given field is provided.<br>
@@ -3336,7 +3354,7 @@ There are many organizations that gather and aggregate indicators at the country
 </ul>
 <p>Most of the time, an analyst will need fields from multiple sources, which will require joining datasets… a practice that is very commonplace in data science. Even though some sources (e.g., the World Bank, gapminder) provide exhaustive fields.</p>
 <p>Lastly, it is important to mention other sources, like:<br>
-- the <a href="https://carbonmonitor.org/"><strong>Carbon monitor</strong></a> initiative. Their aim is to provide almost real-time carbon emissions at a relatively granular level (country). The methodology is outlined in several research papers, from <a href="https://arxiv.org/abs/2006.07690">2020</a> to <a href="https://arxiv.org/abs/2211.01944">late 2022</a>. The updated dataset is available at: <a href="https://datas.carbonmonitor.org/API/downloadFullDataset.php?source=carbon_global" class="uri">https://datas.carbonmonitor.org/API/downloadFullDataset.php?source=carbon_global</a>.
+- the <a href="https://carbonmonitor.org/"><strong>Carbon monitor</strong></a> initiative. Their aim is to provide almost real-time carbon emissions at a relatively granular level (country). The methodology is outlined in several research papers, from <a href="https://arxiv.org/abs/2006.07690">2020</a> to <a href="https://arxiv.org/abs/2211.01944">late 2022</a>. The updated dataset is available at: <a href="https://datas.carbonmonitor.org/API/downloadFullDataset.php?source=carbon_global" class="uri">https://datas.carbonmonitor.org/API/downloadFullDataset.php?source=carbon_global</a>.<br>
 - <a href="https://www.germanwatch.org/"><strong>Germanwatch</strong></a>, and their Climate Change Performance Index (<a href="https://www.germanwatch.org/en/CCPI"><strong>CCPI</strong></a>).<br>
 - The <a href="https://www.ecb.europa.eu/stats/ecb_statistics/sustainability-indicators/html/index.en.html"><strong>ECB</strong></a>: this is news &amp; developing…</p>
 </div>
@@ -3386,8 +3404,8 @@ So first, we pull the data and prepare some variables for the map we want to plo
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">datamap</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span>                                 <span class="co"># Turn into dataframe (technical)</span></span>
-<span>  <span class="fu">sf</span><span class="fu">::</span><span class="fu">st_sf</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span>                                  <span class="co"># Format in sf</span></span>
-<span>  <span class="fu">st_transform</span><span class="op">(</span><span class="st">"+init=epsg:4326"</span><span class="op">)</span> <span class="op">|&gt;</span>              <span class="co"># Convert in particular coordinate reference </span></span>
+<span>  <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/sf.html">st_sf</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span>                                  <span class="co"># Format in sf</span></span>
+<span>  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_transform.html">st_transform</a></span><span class="op">(</span><span class="st">"+init=epsg:4326"</span><span class="op">)</span> <span class="op">|&gt;</span>              <span class="co"># Convert in particular coordinate reference </span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html">leaflet</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span>                                    <span class="co"># Call leaflet</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-methods.html">setView</a></span><span class="op">(</span>lng <span class="op">=</span> <span class="fl">0</span>, lat <span class="op">=</span> <span class="fl">20</span>, zoom <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">|&gt;</span>         <span class="co"># Centering &amp; zooming</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">addPolygons</a></span><span class="op">(</span>fillColor <span class="op">=</span> <span class="op">~</span><span class="fu">palet</span><span class="op">(</span><span class="va">emi_per_cap</span><span class="op">)</span>,    <span class="co"># Create the map (colored polygons)</span></span>
@@ -3517,6 +3535,7 @@ Europe seems to be ahead in terms of regulation, but hopefully the US and Asia w
 <li><a class="nav-link" href="#landscape-of-providers"><span class="header-section-number">3.2.1</span> Landscape of providers</a></li>
 <li><a class="nav-link" href="#consolidation"><span class="header-section-number">3.2.2</span> Consolidation</a></li>
 <li><a class="nav-link" href="#a-booming-industry"><span class="header-section-number">3.2.3</span> A booming industry</a></li>
+<li><a class="nav-link" href="#diversity-in-raters"><span class="header-section-number">3.2.4</span> Diversity in raters</a></li>
 </ul>
 </li>
 <li>
@@ -3561,7 +3580,7 @@ Europe seems to be ahead in terms of regulation, but hopefully the US and Asia w
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret. It was last built on 2023-02-09.</p>
+    <p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret. It was last built on 2023-04-30.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
