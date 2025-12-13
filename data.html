@@ -17,10 +17,10 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="libs/plotly-binding-4.10.4/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="libs/plotly-binding-4.10.4/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 <script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script><link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
-<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script><link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-binding-2.2.2/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
@@ -100,7 +100,8 @@ Code averse readers should of course skip it.</p>
 <div class="inline-figure"><img src="images/s2/iso_26000.png" width="760px" style="display: block; margin: auto;"></div>
 <p>Of course, as will be recalled multiple times, access to ESG data depends on firms’ will to accurately calculate figures and disclose them to the public. Because of the push for transparency, more and more firms are incentivized to do so. For instance, the <a href="https://www.cdp.net/"><strong>CDP Project</strong></a> is an initiative that gathers data on carbon emissions of companies. The coverage of their dataset increases in time:</p>
 <div class="inline-figure"><img src="images/s2/evol.png" width="760px" style="display: block; margin: auto;"></div>
-<p>Thanks to new regulations, this trend is poised to continue. In particular, the <a href="https://www.nzdpu.com/"><strong>Net-Zero Data Public Utility</strong></a> seeks to provide a free platform with access to ESG-related fields for a large number of firms. Such initiatives will help standardize disclosure and hopefully increase transparency.</p>
+<p>See also the <a href="https://www.cdp.net/en/insights/disclosure-data-dashboard-2024">CDP dashboard</a> for more recent numbers.<br>
+Thanks to new regulations, this trend is poised to continue. In particular, the <a href="https://www.nzdpu.com/"><strong>Net-Zero Data Public Utility</strong></a> seeks to provide a free platform with access to ESG-related fields for a large number of firms. Such initiatives will help standardize disclosure and hopefully increase transparency.</p>
 </div>
 <div id="materiality" class="section level3" number="3.1.2">
 <h3>
@@ -132,7 +133,7 @@ Lastly, though it’s not necessarily related, new terms have emerged:</p>
 <ul>
 <li>“<strong>greenwishing</strong>”: this refers to firms that publicly set very ambitious environmental targets, but fail to provide rigorous explanations on how they will achieve their goals. Cheap talk is not binding, but investors are not (always) fools either…<br>
 </li>
-<li>“<strong>grennhushing</strong>”: (<strong>NOTE</strong>: the definition is not unambiguous!) this is either when a green company engages in some form of sustainability but refrains from communicating about it, <strong>OR</strong> when a brown company under-reports on purpose because its numbers are bad. Be careful: people can disagree on this one!<br>
+<li>“<strong>greenhushing</strong>”: (<strong>NOTE</strong>: the definition is not unambiguous!) this is either when a green company engages in some form of sustainability but refrains from communicating about it, <strong>OR</strong> when a brown company under-reports on purpose because its numbers are bad. Be careful: people can disagree on this one!<br>
 </li>
 <li>
 <strong>greenlighting</strong>: communicating excessively on a green feature of a product. Possibly in order to take attention away from browner product lines.<br>
@@ -1591,7 +1592,7 @@ Europe seems to be ahead in terms of regulation, but hopefully the US and Asia w
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret. It was last built on 2025-10-27.</p>
+    <p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret. It was last built on 2025-12-13.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
