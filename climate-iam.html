@@ -16,14 +16,14 @@
 #content .section{margin:0 0 34px}
 #content .section h2{margin:32px 0 12px}
 #content .section h3{font-size:1.05rem;font-weight:600;margin:22px 0 8px}
-#content .sim-layout{display:grid;grid-template-columns:minmax(220px,.78fr) minmax(0,1.5fr);gap:14px;align-items:start}
+#content .sim-layout{display:block}
 #content .results{display:grid;gap:10px}
 #content .metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 #content .definition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;margin:12px 0}
 #content .details{display:block}
 #content .details article{padding:0;border:0;border-radius:0;margin:0 0 18px}
 #content .source-list{display:grid;grid-template-columns:1fr;gap:8px}
-#content .chart{height:245px;overflow:hidden}
+#content .chart{display:block;width:100%;height:auto;aspect-ratio:3.45;overflow:visible}
 #content .series{fill:none;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
 #content .baseline{stroke:#4f7ea8}
 #content .policy-line{stroke:#589b7b}
@@ -57,7 +57,7 @@
 #content .definition dt{font:inherit;font-weight:700;color:#575757;margin-bottom:2px}
 #content .definition dd{font-size:inherit;color:#575757}
 
-#content .controls{padding:16px;position:static;top:auto}
+#content .controls{padding:14px;position:static;top:auto}
 #content .controls h3,#content .chart-title h3,#content .details h3{font:inherit;font-size:1.05rem;font-weight:700}
 #content .controls-intro,#content .control small,#content .metric .label,#content .metric .sub,#content .chart-title span,#content .source p{color:var(--iam-muted)}
 #content .control label{font-size:.9rem}
@@ -86,15 +86,29 @@
 #content .source a{font-weight:600}
 #content .caveat{border-left:4px solid #c47c38;padding:10px 13px;background:#fbf7f2;color:#62492f;border-radius:0 4px 4px 0}
 #content .chapter-nav{display:flex;justify-content:space-between;border-top:1px solid var(--iam-line);padding-top:14px;margin-top:30px}
+#parameter-sidebar .card{background:#fff;border:1px solid var(--iam-line);border-radius:4px;box-shadow:none}
+#parameter-sidebar .controls{padding:14px;position:static}
+#parameter-sidebar .controls h3{font:inherit;font-size:1.05rem;font-weight:700;margin:0 0 8px}
+#parameter-sidebar .controls-intro,#parameter-sidebar .control small{color:var(--iam-muted)}
+#parameter-sidebar .control{margin:0 0 12px}
+#parameter-sidebar .control label{font-size:.9rem;display:block}
+#parameter-sidebar .control output{color:#3c795c;font-weight:600;float:right}
+#parameter-sidebar .control input{accent-color:var(--iam-green);display:block;width:100%;margin:4px 0}
+#parameter-sidebar .control small{display:block;font-size:.78rem;line-height:1.35}
+#parameter-sidebar .button-row{display:flex;gap:6px;flex-wrap:wrap}
+#parameter-sidebar .button{font:inherit;font-size:.82rem;border-radius:4px;padding:6px 8px}
+#parameter-sidebar .button.primary{background:#589b7b;border-color:#589b7b;color:white}
+#parameter-sidebar .button:not(.primary){background:#fff;border-color:#adb5bd;color:#495057}
 #toc h2{font-size:1rem}
 #toc .nav-link{font-size:.9rem}
-@media(max-width:991.98px){#content .sim-layout{grid-template-columns:1fr}}
-@media(max-width:575.98px){#content .metrics,#content .definition-grid{grid-template-columns:1fr}#content .chart{height:205px}}
+@media(min-width:992px){#parameter-sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;align-self:start;padding-bottom:18px}}
+@media(max-width:991.98px){#parameter-sidebar{margin:0 15px 24px}#parameter-sidebar .controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}#parameter-sidebar .controls h3,#parameter-sidebar .controls-intro,#parameter-sidebar .button-row{grid-column:1/-1}#parameter-sidebar .control{margin:0}}
+@media(max-width:575.98px){#content .metrics,#content .definition-grid{grid-template-columns:1fr}#content .chart{aspect-ratio:2.5}#parameter-sidebar .controls{display:block}}
 </style>
 </head>
 <body>
 <div class="container-fluid"><div class="row">
-<header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+<header class="col-sm-12 col-lg-2 sidebar sidebar-book">
   <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
   <div class="d-flex align-items-start justify-content-between"><h1><a href="index.html" title="">Sustainable finance: an introduction</a></h1><button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><span class="sr-only">Show table of contents</span>☰</button></div>
   <div id="main-nav" class="collapse-lg">
@@ -104,7 +118,22 @@
     </ul></nav>
   </div>
 </header>
-<main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div class="col-md-3 col-lg-3 sidebar sidebar-chapter order-lg-3" id="parameter-sidebar"><nav id="toc" aria-label="On this page"><h2>On this page</h2><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#simulation">Explore the model</a></li><li><a class="nav-link" href="#equations">Equations and key concepts</a></li><li><a class="nav-link" href="#limits">Scope and further reading</a></li>
+</ul></nav>
+<aside class="card controls" aria-label="Simulation parameters">
+      <h3>Choose assumptions</h3><p class="controls-intro">Changes update all charts immediately. Reset restores the classroom defaults.</p>
+      <div class="control"><label for="mitigation">Maximum abatement <output id="mitigationOut"></output></label><input id="mitigation" type="range" min="0" max="0.9" step="0.05" value="0.65"><small>Maximum share of emissions avoided in the policy path.</small></div>
+      <div class="control"><label for="policyStart">Policy starts <output id="policyStartOut"></output></label><input id="policyStart" type="range" min="2025" max="2070" step="5" value="2035"><small>Mitigation ramps up gradually after this year.</small></div>
+      <div class="control"><label for="decarbonization">Annual fall in carbon intensity <output id="decarbonizationOut"></output></label><input id="decarbonization" type="range" min="0" max="0.035" step="0.0025" value="0.015"><small>Applies to both paths, before additional policy.</small></div>
+      <div class="control"><label for="sensitivity">Climate sensitivity <output id="sensitivityOut"></output></label><input id="sensitivity" type="range" min="1.5" max="5" step="0.1" value="3"><small>Equilibrium warming after a CO₂ doubling, in °C.</small></div>
+      <div class="control"><label for="damage">Damage coefficient <output id="damageOut"></output></label><input id="damage" type="range" min="0.0005" max="0.01" step="0.0005" value="0.00236"><small>Controls the strength of the quadratic temperature damage.</small></div>
+      <div class="control"><label for="growth">Productivity growth <output id="growthOut"></output></label><input id="growth" type="range" min="0" max="0.03" step="0.0025" value="0.015"><small>Annual growth in total factor productivity.</small></div>
+      <div class="control"><label for="discount">Social discount rate <output id="discountOut"></output></label><input id="discount" type="range" min="0" max="0.05" step="0.0025" value="0.015"><small>Used only for the discounted consumption index below.</small></div>
+      <div class="button-row"><button class="button primary" id="reset" type="button">Reset defaults</button><button class="button" id="download" type="button">Download data CSV</button></div>
+    </aside>
+</div>
+<main class="col-sm-12 col-md-9 col-lg-7 order-lg-2" id="content">
 <div class="section level1" id="climate-iam">
 <div class="hero"><h1>Climate–economy model</h1>
 <p>This interactive page explores how an integrated assessment model (IAM) links economic activity to climate outcomes. Follow emissions, atmospheric CO₂, temperature, damages, investment, and consumption. Then change the assumptions and compare two pathways.</p>
@@ -116,17 +145,6 @@
 <section class="section level2" id="simulation">
   <h2>Explore the model</h2><p>Move one assumption at a time. The blue line has no additional mitigation. The green line introduces mitigation after the selected start year. Both paths share the same economic and climate assumptions.</p>
   <div class="sim-layout">
-    <aside class="card controls" aria-label="Simulation parameters">
-      <h3>Choose assumptions</h3><p class="controls-intro">Changes update all charts immediately. Reset restores the classroom defaults.</p>
-      <div class="control"><label for="mitigation">Maximum abatement <output id="mitigationOut"></output></label><input id="mitigation" type="range" min="0" max="0.9" step="0.05" value="0.65"><small>Maximum share of emissions avoided in the policy path.</small></div>
-      <div class="control"><label for="policyStart">Policy starts <output id="policyStartOut"></output></label><input id="policyStart" type="range" min="2025" max="2070" step="5" value="2035"><small>Mitigation ramps up gradually after this year.</small></div>
-      <div class="control"><label for="decarbonization">Annual fall in carbon intensity <output id="decarbonizationOut"></output></label><input id="decarbonization" type="range" min="0" max="0.035" step="0.0025" value="0.015"><small>Applies to both paths, before additional policy.</small></div>
-      <div class="control"><label for="sensitivity">Climate sensitivity <output id="sensitivityOut"></output></label><input id="sensitivity" type="range" min="1.5" max="5" step="0.1" value="3"><small>Equilibrium warming after a CO₂ doubling, in °C.</small></div>
-      <div class="control"><label for="damage">Damage coefficient <output id="damageOut"></output></label><input id="damage" type="range" min="0.0005" max="0.01" step="0.0005" value="0.00236"><small>Controls the strength of the quadratic temperature damage.</small></div>
-      <div class="control"><label for="growth">Productivity growth <output id="growthOut"></output></label><input id="growth" type="range" min="0" max="0.03" step="0.0025" value="0.015"><small>Annual growth in total factor productivity.</small></div>
-      <div class="control"><label for="discount">Social discount rate <output id="discountOut"></output></label><input id="discount" type="range" min="0" max="0.05" step="0.0025" value="0.015"><small>Used only for the discounted consumption index below.</small></div>
-      <div class="button-row"><button class="button primary" id="reset" type="button">Reset defaults</button><button class="button" id="download" type="button">Download data CSV</button></div>
-    </aside>
     <div class="results">
       <div class="metrics" aria-live="polite">
         <div class="card metric"><div class="label">Warming in 2100 · no policy</div><strong id="mTempBase">—</strong><div class="sub">relative to 1850–1900</div></div>
@@ -176,9 +194,7 @@
 
 <footer class="footer">Interactive classroom model · <a href="https://www.greenfinance.education/climate.html">Return to the climate-risk chapter</a><br>The simulation runs in the browser. Page styling uses the site’s shared Bootstrap and bookdown stylesheets.</footer>
 </div></main>
-<div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter"><nav id="toc" aria-label="On this page"><h2>On this page</h2><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#simulation">Explore the model</a></li><li><a class="nav-link" href="#equations">Equations and key concepts</a></li><li><a class="nav-link" href="#limits">Scope and further reading</a></li>
-</ul></nav></div>
+
 </div></div>
 <div class="chapter-nav container"><a href="climate.html">« Climate risks chapter</a><a href="#climate-iam">Back to top ↑</a></div>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row"><div class="col-12 col-md-6 mt-3"><p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret.</p></div><div class="col-12 col-md-6 mt-3"><p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p></div></div></div></footer>
@@ -238,7 +254,7 @@
     return {rows:rows,cum:cum,discounted:discounted};
   }
   function draw(svgId,a,b,key,yLabel,digits){
-    var svg=byId(svgId),W=700,H=235,L=52,R=14,T=14,B=31,pw=W-L-R,ph=H-T-B;
+    var svg=byId(svgId),W=960,H=278,L=62,R=18,T=18,B=36,pw=W-L-R,ph=H-T-B;
     var vals=a.rows.map(function(r){return r[key];}).concat(b.rows.map(function(r){return r[key];}));
     var min=Math.min.apply(null,vals),max=Math.max.apply(null,vals);
     if(key==='temp'){min=Math.min(0,Math.floor(min*2)/2);max=Math.ceil(max*2)/2;}
