@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive, transparent climate–economy model for teaching integrated assessment models (IAMs).">
+<title>6.3.3 Interactive climate–economy model | Sustainable finance: an introduction</title>
+<link rel="stylesheet" href="https://www.greenfinance.education/libs/bootstrap-5.3.1/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.greenfinance.education/libs/bs4_book-1.0.0/bs4_book.css">
+<style>
+/* Small additions for the simulator. The page shell, typography, and navigation
+   come from the same Bootstrap/bookdown stylesheets as climate.html. */
+:root{--iam-green:#589b7b;--iam-blue:#4f7ea8;--iam-line:#dee2e6;--iam-muted:#6c757d}
+#content{padding:0 12px}
+#content .hero{display:block;padding:0;margin:0 0 30px;grid-template-columns:none;gap:0}
+#content .hero h1{font:inherit;font-size:1.9rem;line-height:1.3;letter-spacing:normal;max-width:none;margin:0 0 8px;font-weight:400}
+#content .hero p{font:inherit;max-width:none;color:inherit;margin:0 0 12px}
+#content .hero-note{background:#f8f9fa;border:1px solid #dee2e6;border-left:4px solid var(--iam-green);border-radius:4px;padding:12px 16px;color:#575757;margin-top:16px}
+#content .hero-note strong{display:block;font:inherit;font-weight:700;margin-bottom:4px}
+#content .hero-note p{font-size:.95rem;margin:0}
+#content .nav{display:none}
+#content .section{margin:0 0 38px;scroll-margin-top:20px}
+#content .section-head{display:block;margin:32px 0 16px}
+#content .section-no{display:none}
+#content .section h2{font:inherit;font-size:1.333rem;line-height:1.3;letter-spacing:normal;margin:32px 0 16px;color:#575757}
+#content .section-head p{color:inherit;margin:0;max-width:none}
+#content .card{background:#fff;border:1px solid var(--iam-line);border-radius:4px;box-shadow:none}
+#content .model-flow{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:4px}
+#content .flow-item{padding:14px 16px;border-right:0;border-bottom:1px solid var(--iam-line)}
+#content .flow-item:nth-last-child(-n+1){border-bottom:0}
+#content .flow-item .step{font-size:.8rem;color:#575757;font-weight:700;letter-spacing:normal;text-transform:none}
+#content .flow-item h3{font:inherit;font-size:1.05rem;font-weight:700;margin:4px 0}
+#content .flow-item p{font-size:.92rem;color:#575757}
+#content .formula,#content .equation{font:inherit;background:#f8f9fa;border:1px solid #dee2e6;border-radius:4px;padding:10px 13px;color:#343a40}
+#content .definition-grid{display:block}
+#content .definition{padding:0;border:0;border-radius:0;margin:0 0 15px}
+#content .definition dt{font:inherit;font-weight:700;color:#575757;margin-bottom:2px}
+#content .definition dd{font-size:inherit;color:#575757}
+#content .sim-layout{grid-template-columns:minmax(225px, .85fr) minmax(0,1.5fr);gap:16px}
+#content .controls{padding:16px;position:static;top:auto}
+#content .controls h3,#content .chart-title h3,#content .details h3{font:inherit;font-size:1.05rem;font-weight:700}
+#content .controls-intro,#content .control small,#content .metric .label,#content .metric .sub,#content .chart-title span,#content .source p{color:var(--iam-muted)}
+#content .control label{font-size:.9rem}
+#content .control output{color:#3c795c}
+#content .control input{accent-color:var(--iam-green)}
+#content .button-row{flex-wrap:wrap}
+#content .button{font:inherit;font-size:.88rem;border-radius:4px;padding:6px 10px}
+#content .button.primary{background:#589b7b;border-color:#589b7b;color:white}
+#content .button:not(.primary){background:#fff;border-color:#adb5bd;color:#495057}
+#content .metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#content .metric{padding:12px}
+#content .metric strong{font:inherit;font-size:1.35rem;font-weight:600;color:#575757;margin-top:5px}
+#content .chart-card{padding:12px 14px 8px}
+#content .chart-title{align-items:flex-start}
+#content .chart{height:205px}
+#content .legend{flex-wrap:wrap;color:#575757}
+#content .axis-label{font:11px "Open Sans",Arial,sans-serif}
+#content .readout{padding:12px 15px;background:#f8f9fa;border-left:4px solid var(--iam-green)}
+#content .readout p{color:#575757}
+#content .details{grid-template-columns:1fr;gap:12px}
+#content .details article{padding:15px 17px}
+#content .details p,#content .details li{font-size:inherit;color:#575757}
+#content .source-list{grid-template-columns:1fr;gap:10px}
+#content .source{padding:12px 15px}
+#content .source a{font-weight:600}
+#content .caveat{border-left:4px solid #c47c38;padding:10px 13px;background:#fbf7f2;color:#62492f;border-radius:0 4px 4px 0}
+#content .chapter-nav{display:flex;justify-content:space-between;border-top:1px solid var(--iam-line);padding-top:14px;margin-top:30px}
+#toc h2{font-size:1rem}
+#toc .nav-link{font-size:.9rem}
+@media(max-width:991.98px){#content .sim-layout{grid-template-columns:1fr}#content .model-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:575.98px){#content .model-flow,#content .metrics{grid-template-columns:1fr}#content .chart{height:185px}}
+</style>
+</head>
+<body>
+<div class="container-fluid"><div class="row">
+<header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  <div class="d-flex align-items-start justify-content-between"><h1><a href="index.html" title="">Sustainable finance: an introduction</a></h1><button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><span class="sr-only">Show table of contents</span>☰</button></div>
+  <div id="main-nav" class="collapse-lg">
+    <form role="search"><input id="search" class="form-control" type="search" placeholder="Search this page" aria-label="Search this page"></form>
+    <nav aria-label="Table of contents"><h2>Table of contents</h2><ul class="book-toc list-unstyled">
+      <li><a href="index.html"><span class="header-section-number">1</span> About</a></li><li><a href="introduction.html"><span class="header-section-number">2</span> Introduction</a></li><li><a href="data.html"><span class="header-section-number">3</span> Data</a></li><li><a href="esg.html"><span class="header-section-number">4</span> ESG investing</a></li><li><a href="green_perf.html"><span class="header-section-number">5</span> Green performance</a></li><li><a class="active" href="climate.html"><span class="header-section-number">6</span> Climate risks</a><ul class="list-unstyled ms-3"><li><a href="climate-iam.html"><span class="header-section-number">6.3.3</span> Interactive IAM</a></li></ul></li><li><a href="slides.html"><span class="header-section-number">7</span> Corporate finance (slides)</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div class="section level1" id="climate-iam">
+<div class="hero"><h1>6.3.3 An interactive climate–economy model</h1>
+<p>This module extends the chapter’s introduction to DICE with a small, transparent integrated assessment model (IAM). Follow the feedback from economic output to emissions, atmospheric CO₂, temperature, climate damages, and consumption. Then change the assumptions and compare two pathways.</p>
+<div class="hero-note"><strong>A model to inspect, not a forecast</strong><p>The equations and default values are illustrative. They show mechanisms and do not produce a calibrated forecast or a policy recommendation.</p></div></div>
+
+<section class="section level2" id="structure">
+  <h2>6.3.3.1 Model structure</h2><p>An integrated assessment model (IAM) links human activity to the climate system and then feeds climate impacts back into the economy. This page uses a compact annual model with five connected blocks.</p>
+  <div class="card model-flow">
+    <div class="flow-item"><div class="step">01 · Economy</div><h3>Output</h3><p>Capital, labour, and productivity produce global output.</p></div>
+    <div class="flow-item"><div class="step">02 · Emissions</div><h3>Energy and carbon</h3><p>Output creates CO₂ according to carbon intensity and abatement.</p></div>
+    <div class="flow-item"><div class="step">03 · Climate</div><h3>Carbon and heat</h3><p>Atmospheric CO₂ raises radiative forcing and temperature.</p></div>
+    <div class="flow-item"><div class="step">04 · Damages</div><h3>Economic impacts</h3><p>Higher temperature reduces productive output through a simple damage function.</p></div>
+    <div class="flow-item"><div class="step">05 · Choices</div><h3>Consumption</h3><p>Output is divided between investment, mitigation costs, and consumption.</p></div>
+  </div>
+  <div class="formula" role="math" aria-label="Output leads to emissions, atmospheric carbon dioxide, temperature, damages, and consumption">Output → CO₂ emissions → atmospheric CO₂ → temperature → damages → consumption</div>
+</section>
+<section class="section level2" id="terms">
+  <h2>6.3.3.2 Key terms</h2><p>These concepts also appear in the climate-risk chapter. Here they are connected inside a single simulation.</p>
+  <dl class="definition-grid">
+    <div class="card definition"><dt>Integrated assessment model (IAM)</dt><dd>A model that combines economic activity with environmental or climate processes to study how they affect one another.</dd></div>
+    <div class="card definition"><dt>Abatement, μ</dt><dd>The share of emissions avoided through mitigation. In this model, μ = 0 means no additional mitigation; μ = 0.8 means an 80% reduction in emissions relative to the technology path.</dd></div>
+    <div class="card definition"><dt>Carbon intensity, σ</dt><dd>CO₂ emitted per unit of economic output. Falling intensity represents cleaner energy, efficiency gains, or both.</dd></div>
+    <div class="card definition"><dt>Radiative forcing</dt><dd>A change in Earth’s energy balance. The model approximates the CO₂ contribution as 5.35 × ln(C / C₀), in watts per square metre.</dd></div>
+    <div class="card definition"><dt>Climate sensitivity</dt><dd>The eventual global temperature response to a doubling of atmospheric CO₂, measured in °C. The model uses a two-layer heat response, so warming takes time.</dd></div>
+    <div class="card definition"><dt>Damage function</dt><dd>A simplified mapping from global mean temperature to lost output. Its quadratic form captures rising damages, but cannot represent local exposure or tipping points.</dd></div>
+  </dl>
+</section>
+<section class="section level2" id="simulation">
+  <h2>6.3.3.3 Run a simulation</h2><p>Move one assumption at a time. The blue line has no additional mitigation. The green line introduces mitigation after the selected start year. Both paths share the same economic and climate assumptions.</p>
+  <div class="sim-layout">
+    <aside class="card controls" aria-label="Simulation parameters">
+      <h3>Choose assumptions</h3><p class="controls-intro">Changes update all charts immediately. Reset restores the classroom defaults.</p>
+      <div class="control"><label for="mitigation">Maximum abatement <output id="mitigationOut"></output></label><input id="mitigation" type="range" min="0" max="0.9" step="0.05" value="0.65"><small>Maximum share of emissions avoided in the policy path.</small></div>
+      <div class="control"><label for="policyStart">Policy starts <output id="policyStartOut"></output></label><input id="policyStart" type="range" min="2025" max="2070" step="5" value="2035"><small>Mitigation ramps up gradually after this year.</small></div>
+      <div class="control"><label for="decarbonization">Annual fall in carbon intensity <output id="decarbonizationOut"></output></label><input id="decarbonization" type="range" min="0" max="0.035" step="0.0025" value="0.015"><small>Applies to both paths, before additional policy.</small></div>
+      <div class="control"><label for="sensitivity">Climate sensitivity <output id="sensitivityOut"></output></label><input id="sensitivity" type="range" min="1.5" max="5" step="0.1" value="3"><small>Equilibrium warming after a CO₂ doubling, in °C.</small></div>
+      <div class="control"><label for="damage">Damage coefficient <output id="damageOut"></output></label><input id="damage" type="range" min="0.0005" max="0.01" step="0.0005" value="0.00236"><small>Controls the strength of the quadratic temperature damage.</small></div>
+      <div class="control"><label for="growth">Productivity growth <output id="growthOut"></output></label><input id="growth" type="range" min="0" max="0.03" step="0.0025" value="0.015"><small>Annual growth in total factor productivity.</small></div>
+      <div class="control"><label for="discount">Social discount rate <output id="discountOut"></output></label><input id="discount" type="range" min="0" max="0.05" step="0.0025" value="0.015"><small>Used only for the discounted consumption index below.</small></div>
+      <div class="button-row"><button class="button primary" id="reset" type="button">Reset defaults</button><button class="button" id="download" type="button">Download data CSV</button></div>
+    </aside>
+    <div class="results">
+      <div class="metrics" aria-live="polite">
+        <div class="card metric"><div class="label">Warming in 2100 · no policy</div><strong id="mTempBase">—</strong><div class="sub">relative to 1850–1900</div></div>
+        <div class="card metric"><div class="label">Warming in 2100 · mitigation</div><strong id="mTempPolicy">—</strong><div class="sub" id="mTempDiff">—</div></div>
+        <div class="card metric"><div class="label">Cumulative CO₂ · mitigation path</div><strong id="mCum">—</strong><div class="sub">2025–2100, GtCO₂</div></div>
+        <div class="card metric"><div class="label">Discounted consumption · policy path</div><strong id="mWelfare">—</strong><div class="sub" id="mWelfareDiff">no-policy path = 100</div></div>
+      </div>
+      <div class="card chart-card"><div class="chart-title"><h3>Global mean temperature</h3><span>°C above pre-industrial baseline</span></div><svg class="chart" id="tempChart" role="img" aria-label="Chart of temperature in two scenarios"></svg><div class="legend"><span class="key"><i class="swatch"></i>No additional mitigation</span><span class="key"><i class="swatch policy"></i>Mitigation path</span></div></div>
+      <div class="card chart-card"><div class="chart-title"><h3>Annual CO₂ emissions</h3><span>GtCO₂ per year</span></div><svg class="chart" id="emissionsChart" role="img" aria-label="Chart of annual carbon dioxide emissions in two scenarios"></svg><div class="legend"><span class="key"><i class="swatch"></i>No additional mitigation</span><span class="key"><i class="swatch policy"></i>Mitigation path</span></div></div>
+      <div class="card chart-card"><div class="chart-title"><h3>Net output after climate damages and abatement costs</h3><span>Index · 2025 = 100</span></div><svg class="chart" id="outputChart" role="img" aria-label="Chart of net economic output in two scenarios"></svg><div class="legend"><span class="key"><i class="swatch"></i>No additional mitigation</span><span class="key"><i class="swatch policy"></i>Mitigation path</span></div></div>
+      <div class="card readout"><p id="interpretation">The simulation summary will appear here.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section level2" id="equations">
+  <h2>6.3.3.4 Model equations</h2><p>The model runs in one-year steps from 2025 to 2100. It keeps the feedback loops visible while avoiding a large codebase or external data dependency.</p>
+  <div class="details">
+    <article class="card"><h3>1. Production and emissions</h3><p>Potential output comes from capital, labour, and productivity. Emissions depend on output, carbon intensity, and the abatement choice.</p><div class="equation">Y<sub>t</sub> = A<sub>t</sub>K<sub>t</sub><sup>α</sup>L<sub>t</sub><sup>1−α</sup><br>E<sub>t</sub> = σ<sub>t</sub>Y<sub>t</sub>(1 − μ<sub>t</sub>)</div><p>Productivity grows at the selected rate. Carbon intensity declines at its selected rate. In the policy path, abatement rises smoothly toward its chosen maximum after the start year.</p></article>
+    <article class="card"><h3>2. Carbon and temperature</h3><p>Emissions add to an atmospheric carbon stock. Carbon exchanges with a slower ocean reservoir. CO₂ concentration changes radiative forcing, which warms the atmosphere and ocean layers at different speeds.</p><div class="equation">F<sub>t</sub> = 5.35 ln(C<sub>t</sub> / C₀)<br>ΔT<sub>a</sub> ∝ F<sub>t</sub> − λT<sub>a</sub> − γ(T<sub>a</sub> − T<sub>o</sub>)</div><p>Here C₀ = 278 ppm. The equilibrium feedback λ is set from climate sensitivity. A second temperature state represents slow heat uptake by the deep ocean.</p></article>
+    <article class="card"><h3>3. Damages, costs, and investment</h3><p>Temperature damages and abatement costs reduce output available to the economy. A fixed share of net output is invested; the rest is consumed.</p><div class="equation">D(T) = ψT² / (1 + ψT²)<br>Q<sub>t</sub> = Y<sub>t</sub>(1 − D(T<sub>t</sub>))(1 − θμ<sub>t</sub><sup>2.8</sup>)<br>C<sub>t</sub> = (1 − s)Q<sub>t</sub></div><p>Capital then accumulates from investment and depreciates. The displayed discounted consumption index discounts total consumption at the selected rate. It is a comparison metric, not an optimized social welfare solution or a social cost of carbon.</p></article>
+    <article class="card"><h3>4. Why show two scenarios?</h3><p>Holding the assumptions fixed isolates the role of the policy path. The gap between lines is the model’s implied difference under these equations, not a causal estimate from observed data.</p><div class="equation">Δ outcome = outcome<sub>mitigation</sub> − outcome<sub>no additional mitigation</sub></div><p>Mitigation has an immediate modeled cost and a delayed climate benefit. The balance depends on the parameters, timing, and the model’s simplified structure.</p></article>
+  </div>
+</section>
+<section class="section level2" id="limits">
+  <h2>6.3.3.5 Limitations</h2><p>The model is useful for reasoning about mechanisms. It leaves out many features that matter for scientific assessment and policy design.</p>
+  <div class="details">
+    <article class="card"><h3>What is simplified</h3><ul><li>One global economy and one global temperature. No countries, sectors, households, or distributional effects.</li><li>CO₂ is the only greenhouse gas. The model omits methane, nitrous oxide, aerosols, land-use change, and natural variability.</li><li>Climate damages are smooth and quadratic. No explicit extremes, adaptation, biodiversity loss, tipping points, or sea-level rise.</li><li>Mitigation is a chosen pathway, not the result of an optimization problem. The model does not calculate a defensible social cost of carbon.</li></ul></article>
+    <article class="card"><h3>How to use it in class</h3><ul><li>Change one parameter and explain the channel before interpreting the chart.</li><li>Compare early with delayed mitigation. Separate the near-term cost from the long-run temperature effect.</li><li>Raise climate sensitivity and the damage coefficient separately. They enter different parts of the model.</li><li>Use outputs as a controlled illustration. Do not present them as current NGFS or IPCC scenario estimates.</li></ul><div class="caveat"><strong>Calibration note:</strong> defaults are chosen for clear classroom behavior. A quantitative application would require calibration, validation against data, uncertainty analysis, and a documented version of the full model.</div></article>
+  </div>
+</section>
+<section class="section level2" id="sources">
+  <h2>6.3.3.6 Further reading</h2><p>These sources provide the foundations and context for the compact model above.</p>
+  <div class="source-list">
+    <article class="card source"><a href="https://www.greenfinance.education/climate.html">Chapter 6 · Climate risks</a><p>The companion chapter covers IPCC scenarios, the Kaya identity, DICE, NGFS, and climate-based valuation.</p></article>
+    <article class="card source"><a href="https://www.nobelprize.org/prizes/economic-sciences/2018/nordhaus/facts/">William Nordhaus · Nobel Prize lecture and background</a><p>Background on integrated climate–economy modeling and the development of DICE.</p></article>
+    <article class="card source"><a href="https://www.pnas.org/doi/10.1073/pnas.2312030121">L. Barrage and W. Nordhaus (2024), “Policies, projections, and the social cost of carbon: Results from the DICE-2023 model”</a><p>An updated specification and discussion of DICE-2023, its policy projections, and the social cost of carbon.</p></article>
+    <article class="card source"><a href="https://www.ipcc.ch/report/ar6/wg1/">IPCC Sixth Assessment Report · Working Group I</a><p>Assessment of the physical science basis of climate change, including carbon and climate response.</p></article>
+  </div>
+</section>
+<footer class="footer">Interactive classroom model · <a href="https://www.greenfinance.education/climate.html">Return to the climate-risk chapter</a><br>Built as a self-contained HTML page. No external libraries or data calls are required.</footer>
+</div></main>
+<div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter"><nav id="toc" aria-label="On this page"><h2>On this page</h2><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#climate-iam"><span class="header-section-number">6.3.3</span> Interactive climate–economy model</a></li>
+<li><a class="nav-link" href="#structure"><span class="header-section-number">6.3.3.1</span> Model structure</a></li><li><a class="nav-link" href="#terms"><span class="header-section-number">6.3.3.2</span> Key terms</a></li><li><a class="nav-link" href="#simulation"><span class="header-section-number">6.3.3.3</span> Run a simulation</a></li><li><a class="nav-link" href="#equations"><span class="header-section-number">6.3.3.4</span> Model equations</a></li><li><a class="nav-link" href="#limits"><span class="header-section-number">6.3.3.5</span> Limitations</a></li><li><a class="nav-link" href="#sources"><span class="header-section-number">6.3.3.6</span> Further reading</a></li>
+</ul></nav></div>
+</div></div>
+<div class="chapter-nav container"><a href="climate.html">« 6 Climate risks</a><a href="slides.html">7 Corporate finance (slides) »</a></div>
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row"><div class="col-12 col-md-6 mt-3"><p>"<strong>Sustainable finance: an introduction</strong>" was written by Guillaume Coqueret.</p></div><div class="col-12 col-md-6 mt-3"><p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p></div></div></div></footer>
+<script>
+  var searchBox=document.getElementById('search');
+  searchBox.addEventListener('input',function(){var q=this.value.toLowerCase();document.querySelectorAll('.book-toc > li').forEach(function(li){li.hidden=q && !li.textContent.toLowerCase().includes(q);});});
+</script>
+<script>
+(function(){
+  'use strict';
+  var defaults={mitigation:0.65,policyStart:2035,decarbonization:0.015,sensitivity:3,damage:0.00236,growth:0.015,discount:0.015};
+  var ids=Object.keys(defaults), byId=function(id){return document.getElementById(id);};
+  var fmt=function(x,d){return Number(x).toFixed(d);};
+  function read(){var p={};ids.forEach(function(id){p[id]=Number(byId(id).value);});return p;}
+  function updateLabels(p){
+    byId('mitigationOut').textContent=Math.round(p.mitigation*100)+'%';
+    byId('policyStartOut').textContent=Math.round(p.policyStart);
+    byId('decarbonizationOut').textContent=fmt(p.decarbonization*100,2)+'%';
+    byId('sensitivityOut').textContent=fmt(p.sensitivity,1)+' °C';
+    byId('damageOut').textContent=fmt(p.damage,4);
+    byId('growthOut').textContent=fmt(p.growth*100,2)+'%';
+    byId('discountOut').textContent=fmt(p.discount*100,2)+'%';
+  }
+  function run(p,policy){
+    var start=2025,end=2100,alpha=.30,pop0=8.2,capital=300,output0=100;
+    var productivity=output0/(Math.pow(capital,alpha)*Math.pow(pop0,1-alpha));
+    var carbon0=278,atm=425-carbon0,ocean=0,tempA=1.2,tempO=.3;
+    var emissions0=.40,abatementCost=.12,saving=.22,depreciation=.05;
+    var kAO=.008,kOA=.001,kDeep=.0005,co2ppm=28.6,F2x=3.93,gamma=.70,heatA=8,heatO=100;
+    var climateFeedback=F2x/p.sensitivity, rows=[],cum=0,discounted=0;
+    for(var year=start;year<=end;year++){
+      var n=year-start;
+      var L=pop0*Math.pow(1.002,n);
+      var A=productivity*Math.pow(1+p.growth,n);
+      var gross=A*Math.pow(capital,alpha)*Math.pow(L,1-alpha);
+      var sigma=emissions0*Math.exp(-p.decarbonization*n);
+      var mu=0;
+      if(policy && year>p.policyStart){mu=p.mitigation*(1-Math.exp(-.10*(year-p.policyStart)));}
+      var e=sigma*gross*(1-mu);
+      if(year<end)cum+=e;
+      atm+=e/co2ppm-kAO*atm+kOA*ocean;
+      ocean+=kAO*atm-(kOA+kDeep)*ocean;
+      var conc=Math.max(180,carbon0+atm);
+      var forcing=5.35*Math.log(conc/carbon0);
+      var dtA=(forcing-climateFeedback*tempA-gamma*(tempA-tempO))/heatA;
+      var dtO=gamma*(tempA-tempO)/heatO;
+      tempA+=dtA;tempO+=dtO;
+      var damageShare=(p.damage*tempA*tempA)/(1+p.damage*tempA*tempA);
+      var abateShare=abatementCost*Math.pow(mu,2.8);
+      var net=gross*(1-damageShare)*(1-abateShare);
+      var consumption=(1-saving)*net;
+      var perCap=consumption/L;
+      discounted+=consumption*Math.pow(1+p.discount,-n);
+      rows.push({year:year,temp:tempA,emissions:e,output:net,consumption:consumption,mu:mu,carbon:conc});
+      if(year<end){capital=Math.max(1,capital+ saving*net-depreciation*capital);}
+    }
+    return {rows:rows,cum:cum,discounted:discounted};
+  }
+  function draw(svgId,a,b,key,yLabel,digits){
+    var svg=byId(svgId),W=700,H=235,L=52,R=14,T=14,B=31,pw=W-L-R,ph=H-T-B;
+    var vals=a.rows.map(function(r){return r[key];}).concat(b.rows.map(function(r){return r[key];}));
+    var min=Math.min.apply(null,vals),max=Math.max.apply(null,vals);
+    if(key==='temp'){min=Math.min(0,Math.floor(min*2)/2);max=Math.ceil(max*2)/2;}
+    else{var pad=(max-min)*.12||1;min=Math.max(0,min-pad);max+=pad;}
+    if(max===min)max=min+1;
+    var x=function(i){return L+pw*i/(a.rows.length-1);},y=function(v){return T+ph*(max-v)/(max-min);};
+    var ticks=4,parts=[];
+    for(var t=0;t<=ticks;t++){
+      var v=min+(max-min)*t/ticks, yy=y(v);
+      parts.push('<line class="gridline" x1="'+L+'" y1="'+yy+'" x2="'+(W-R)+'" y2="'+yy+'"></line>');
+      parts.push('<text class="axis-label" x="'+(L-8)+'" y="'+(yy+4)+'" text-anchor="end">'+fmt(v,digits)+'</text>');
+    }
+    [0,25,50,75].forEach(function(i){var xx=x(i);parts.push('<text class="axis-label" x="'+xx+'" y="'+(H-8)+'" text-anchor="middle">'+a.rows[i].year+'</text>');});
+    function path(rows){return rows.map(function(r,i){return (i?'L':'M')+x(i).toFixed(2)+','+y(r[key]).toFixed(2);}).join(' ');}
+    parts.push('<path class="series baseline" d="'+path(a.rows)+'"></path>');
+    parts.push('<path class="series policy-line" d="'+path(b.rows)+'"></path>');
+    parts.push('<line class="axis" x1="'+L+'" y1="'+(T+ph)+'" x2="'+(W-R)+'" y2="'+(T+ph)+'"></line>');
+    parts.push('<text class="axis-label" x="'+L+'" y="'+(H-8)+'" text-anchor="start">2025</text>');
+    parts.push('<text class="axis-label" x="'+(W-R)+'" y="'+(H-8)+'" text-anchor="end">2100</text>');
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.innerHTML=parts.join('');
+  }
+  function simulate(){
+    var p=read();updateLabels(p);var base=run(p,false),pol=run(p,true),last=base.rows.length-1;
+    draw('tempChart',base,pol,'temp','°C',1);
+    draw('emissionsChart',base,pol,'emissions','GtCO₂',0);
+    draw('outputChart',base,pol,'output','Index',0);
+    var tb=base.rows[last].temp,tp=pol.rows[last].temp,delta=tp-tb;
+    byId('mTempBase').textContent=fmt(tb,1)+' °C';byId('mTempPolicy').textContent=fmt(tp,1)+' °C';
+    byId('mTempDiff').textContent=(delta<0?'−':'+')+fmt(Math.abs(delta),1)+' °C versus no additional mitigation';
+    byId('mCum').textContent=Math.round(pol.cum).toLocaleString('en-US');
+    var welfareChange=(pol.discounted/base.discounted-1)*100;
+    byId('mWelfare').textContent=fmt((pol.discounted/base.discounted)*100,1);
+    byId('mWelfareDiff').textContent=(welfareChange<0?'−':'+')+fmt(Math.abs(welfareChange),1)+'% versus no additional mitigation';
+    var e0=base.rows[last].emissions,e1=pol.rows[last].emissions;
+    byId('interpretation').textContent='With these assumptions, the mitigation path reaches '+fmt(tp,1)+' °C of warming by 2100, compared with '+fmt(tb,1)+' °C without additional mitigation. Annual emissions in 2100 are '+fmt(e1,1)+' versus '+fmt(e0,1)+' GtCO₂. The discounted consumption index is '+fmt(Math.abs(welfareChange),1)+'% '+(welfareChange<0?'lower':'higher')+' in the mitigation path. These are outputs of the selected equations and parameters, not forecasts.';
+    window.iamRows={base:base.rows,policy:pol.rows};
+  }
+  ids.forEach(function(id){byId(id).addEventListener('input',simulate);});
+  byId('reset').addEventListener('click',function(){ids.forEach(function(id){byId(id).value=defaults[id];});simulate();});
+  byId('download').addEventListener('click',function(){
+    if(!window.iamRows)return;var rows=['year,temperature_no_policy,temperature_mitigation,emissions_no_policy_gtco2,emissions_mitigation_gtco2,net_output_no_policy,net_output_mitigation,carbon_ppm_no_policy,carbon_ppm_mitigation'];
+    window.iamRows.base.forEach(function(r,i){var q=window.iamRows.policy[i];rows.push([r.year,r.temp.toFixed(4),q.temp.toFixed(4),r.emissions.toFixed(4),q.emissions.toFixed(4),r.output.toFixed(4),q.output.toFixed(4),r.carbon.toFixed(3),q.carbon.toFixed(3)].join(','));});
+    var blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='climate-iam-simulation.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+  });
+  simulate();
+})();
+</script>
+</body>
+</html>
